@@ -23,7 +23,7 @@ public class Funcionario {
     private Long id;
 
     @Column (name = "nome")
-    @NotBlank (message = "Nome não pode estar vazio")
+    @NotBlank (message = "Nome é obrigatório")
     private String nomeFuncionario;
 
     @Column (name = "data_adimissao")
@@ -32,6 +32,7 @@ public class Funcionario {
     @Column (name="salario")
     private BigDecimal salario;
 
+    @Enumerated(EnumType.STRING)
     @Column (name= "status")
     private StatusFuncionario statusFuncionario;
 
