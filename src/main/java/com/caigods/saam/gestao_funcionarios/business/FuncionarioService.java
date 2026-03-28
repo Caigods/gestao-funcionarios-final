@@ -5,6 +5,7 @@ import com.caigods.saam.gestao_funcionarios.business.dto.FuncionarioDTO;
 import com.caigods.saam.gestao_funcionarios.business.exception.BadRequestException;
 import com.caigods.saam.gestao_funcionarios.infrastructure.entity.Funcionario;
 import com.caigods.saam.gestao_funcionarios.infrastructure.repository.FuncionarioRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class FuncionarioService {
     private final FuncionarioRepository funcionarioRepository;
     private final FuncionarioConverter funcionarioConverter;
 
+    @Transactional
     public FuncionarioDTO salvarFuncionario(FuncionarioDTO funcionarioDTO) {
         validarDataAdmissao(funcionarioDTO.getDataAdimissao());
         validarSalarioNeg(funcionarioDTO.getSalario());
