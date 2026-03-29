@@ -37,6 +37,8 @@ public class SecurityConfig {
         com.caigods.saam.gestao_funcionarios.security.JwtRequestFilter jwtRequestFilter = new com.caigods.saam.gestao_funcionarios.security.JwtRequestFilter(jwtUtil, userDetailsService);
 
         http
+                .cors(cors -> cors.configure(http))
+                .csrf(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable) // Desativa proteção CSRF para APIs REST (não aplicável a APIs que não mantêm estado)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll() // Autoriza o swagger
