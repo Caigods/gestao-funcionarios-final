@@ -12,6 +12,7 @@ public class FuncionarioConverter {
     public FuncionarioDTO toDTO(Funcionario funcionario) {
         FuncionarioDTO funcionarioDTO = new FuncionarioDTO();
 
+        funcionarioDTO.setId(funcionario.getId());
         funcionarioDTO.setNomeFuncionario(funcionario.getNomeFuncionario());
         funcionarioDTO.setDataAdimissao(funcionario.getDataAdimissao());
         funcionarioDTO.setSalario(funcionario.getSalario());
