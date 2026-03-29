@@ -2,6 +2,7 @@ package com.caigods.saam.gestao_funcionarios.infrastructure.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,12 +27,15 @@ public class Funcionario {
     @NotBlank (message = "Nome é obrigatório")
     private String nomeFuncionario;
 
-    @Column (name = "data_adimissao")
+    @NotNull(message = "Data de admissão é obrigatória")
+    @Column (name = "data_admissao")
     private LocalDate dataAdimissao;
 
+    @NotNull(message = "Salário é obrigatório")
     @Column (name="salario")
     private BigDecimal salario;
 
+    @NotNull(message = "Status do funcionário é obrigatório")
     @Enumerated(EnumType.STRING)
     @Column (name= "status")
     private StatusFuncionario statusFuncionario;
