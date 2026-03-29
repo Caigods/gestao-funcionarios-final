@@ -1,4 +1,4 @@
-INSERT INTO usuario (email, senha)
+INSERT INTO usuarios (email, senha)
 VALUES ('admin@admin.com', '$2a$12$gHVDLjE.qqOkLOxinr8Kvusy4c3m2jQLcI957NiICZgEutzuiOO/G');
 
 
