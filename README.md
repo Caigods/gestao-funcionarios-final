@@ -27,21 +27,16 @@ Aplicação Full Stack para gestão de funcionários, desenvolvida como teste pr
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/gestao-funcionarios.git
-cd gestao-funcionarios
+git clone https://github.com/Caigods/gestao-funcionarios-final.git
+cd gestao-funcionarios-final
 ```
 
-2. Copie o arquivo de variáveis de ambiente:
-```bash
-cp .env.example .env
-```
-
-3. Suba a aplicação:
+2. Suba a aplicação:
 ```bash
 docker-compose up --build
 ```
 
-4. Acesse no navegador:
+3. Acesse no navegador:
 ```
 http://localhost
 ```
@@ -65,7 +60,6 @@ gestao-funcionarios/
 ├── frontend/             # Código fonte do frontend
 ├── docker-compose.yml    # Orquestração dos containers
 ├── Dockerfile            # Build do backend
-├── .env.example          # Variáveis de ambiente de exemplo
 └── README.md
 ```
 
