@@ -71,3 +71,6 @@ gestao-funcionarios/
 - Listagem de funcionários
 - Cadastro de novos funcionários
 - Proteção de rotas com JWT
+
+
+  Caigods/ Caique Godinho
